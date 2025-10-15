@@ -9,4 +9,41 @@ html,
 body {
   width: 100%;
   height: 100%;
+}
+
+main {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 15px;
+  padding: 15px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 300px 300px 300px;
+  grid-template-areas: "left top-right top-right top-right" "left bottom-left bottom-center bottom-right" "left bottom-left bottom-center bottom-right";
+}
+main .column {
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+}
+main .column img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .left {
+  grid-area: left;
+}
+main .top-right {
+  grid-area: top-right;
+}
+main .bottom-left {
+  grid-area: bottom-left;
+}
+main .bottom-center {
+  grid-area: bottom-center;
+}
+main .bottom-right {
+  grid-area: bottom-right;
 }/*# sourceMappingURL=style.css.map */
